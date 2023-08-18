@@ -5,6 +5,7 @@ import time
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 from transformers import pipeline
 import torch
+
 import textwrap
 from langchain.document_loaders import PyPDFLoader, DirectoryLoader, PDFMinerLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -29,6 +30,7 @@ persist_directory = "db"
 
 
 @st.cache_resource
+
 def data_ingestion():
     for root, dirs, files in os.walk("docs"):
         for file in files:
@@ -48,6 +50,7 @@ def data_ingestion():
 
 @st.cache_resource
 def llm_pipeline():
+
     pipe = pipeline(
         'text2text-generation',
         model=base_model,
