@@ -16,6 +16,22 @@ The application follows these main steps:
 
 - User Interaction: Users can interact with the chatbot by inputting natural language queries. The chatbot retrieves relevant responses from the LLM pipeline and displays a conversation history.
 
+
+This will run the streamlit window where user can inquire the file.
+
+----> u may run it errors if the sqlite db, duckduck db is not upto date... ideally run this with python 3.10 or above versions for need for supporting libraries
+
+______________
+```commandline
+pip install -r requirements.txt
+```
+Run the Streamlit app:
+```
+streamlit run your_script_name.py
+```
+Access the chatbot by opening the provided URL in your web browser.
+
+
 Getting Started
 
 To run the PDF Chatbot with Streamlit, follow these steps:
