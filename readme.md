@@ -16,6 +16,29 @@ The application follows these main steps:
 
 - User Interaction: Users can interact with the chatbot by inputting natural language queries. The chatbot retrieves relevant responses from the LLM pipeline and displays a conversation history.
 
+______________
+1st run this :
+```
+# Make sure you have git-lfs installed (https://git-lfs.com)
+git lfs install
+git clone https://huggingface.co/MBZUAI/LaMini-T5-738M
+```
+
+This clones the lamini llm from Hugging face and make a new directory in work env (~2Gb)
+
+2nd :
+Place new document in docs file directory
+
+3rd :
+```
+python ingest.py
+```
+This will create embeddings and chroma vector store of the file u placed in docs
+
+4th
+```
+streamlit run chatbot_app.py
+```
 
 This will run the streamlit window where user can inquire the file.
 
